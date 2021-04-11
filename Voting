@@ -1,0 +1,64 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+   int day,month,year;
+   int age,presentyear=2021;
+   string ans,ans1,ans2,a,b,c;
+   ans1 = "yes";
+   ans2 = "no";
+   b="yes";
+   c="no";
+   cout<<"Are you a citizen of india?"<<endl;
+   getline(cin,ans);
+   if(ans=="yes")
+   {
+       cout<<"\n"<<endl;
+   }else{
+       cout<<"You are not the citizen of India and not eligible for voting."<<endl;
+   return 0;
+   }
+    cout<<"Is your name registered in the electoral list of voters"<<endl;
+   getline(cin,a);
+   if(a == "yes")
+   {
+       cout<<"\n"<<endl;
+   }else{
+   cout<<"Thus you cannot vote."<<endl;
+   return 0;
+   }
+
+   cout<<"Enter your Date of Birth "<<endl;
+   cout<<"DD: ";
+   cin>>day;
+   if(day>31)
+   {
+   	cout<<"You have entered an invalid day."<<endl;
+   return 0;
+   }
+   cout<<"MM: ";
+   cin>>month;
+   if(month>12)
+   {
+   	cout<<"You have entered an invalid month."<<endl;
+   return 0;
+   }
+   cout<<"YYYY: ";
+   cin>>year;
+   age = presentyear - year;
+    cout<<"Your age is: "<<age<<"\n"<<endl;
+
+
+   if(age>=18)
+   {
+      cout<<"You are eligible for the voting"<<endl;
+   }else{
+   	  cout<<"You are not eligible for the voting"<<endl;
+   }
+
+
+return 0;
+}
+ 
