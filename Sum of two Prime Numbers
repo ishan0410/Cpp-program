@@ -1,0 +1,38 @@
+#include <iostream>
+
+using namespace std;
+bool checkingprime (int n){
+     int i;
+     bool isPrime=true;
+     if (n==0 || n==1){
+     isPrime=false;
+     }else{
+     for(i=2;i<=n/2;++i)
+     if(n%i==0){
+        isPrime=false;
+        break;
+     }
+
+}
+return isPrime;
+}
+int main()
+{
+   int i,n;
+   bool option=false;
+   cout<<"Enter a positive integer : "<<endl;
+   cin>>n;
+   for (i=2;i<=n/2;++i)
+       if (checkingprime(i)){
+          if(checkingprime(n-i)){
+      cout<<n<< " = "<<i<< " + "<< n-i<<endl;
+      option=true;
+
+      }
+
+}
+if(!option){
+    cout<<n<<" can't be expressed as sum of two prime numbers."<<endl;
+   } return 0;
+
+}
